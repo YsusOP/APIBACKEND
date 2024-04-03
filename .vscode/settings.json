@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5fbab21e-9c69-4a7c-a637-d6bcc583835e/resourceGroups/exercise/providers/Microsoft.Web/sites/backapiexercise",
+    "appService.deploySubpath": "."
+}
