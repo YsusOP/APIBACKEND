@@ -7,5 +7,5 @@ class DevelomentConfig():
 
 
 config={
-    'development': DevelomentConfig()  # <- Agrega los paréntesis para instanciar la clase
+    'production': ProductionConfig
 }
