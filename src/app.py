@@ -469,10 +469,15 @@ def actualizar_datos_usuario(idDocumento):
     except Exception as e:
         # Retornar un mensaje de error en caso de fallo en la actualización
         return jsonify({'error': 'Error al actualizar los datos del usuario: ' + str(e)}), 500
+app.config.from_object(config[os.getenv('FLASK_ENV', 'production')])
+app.register_error_handler(404, pagina_no_encontrada)
+
+@app.errorhandler(404)
+def pagina_no_encontrada(error):
+    return 'Página no encontrada', 404
 
 if __name__ == '__main__':
     app.run()
-app.config.from_object(config['development'])
-app.register_error_handler(404, pagina_no_encontrada)
+
 
 
