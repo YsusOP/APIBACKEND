@@ -471,8 +471,7 @@ def actualizar_datos_usuario(idDocumento):
         return jsonify({'error': 'Error al actualizar los datos del usuario: ' + str(e)}), 500
 
 if __name__ == '__main__':
-    
-app.config.from_object(config['development'])
-app.register_error_handler(404, pagina_no_encontrada)
-app.run()
+    app.config.from_object(config['development'])
+    app.register_error_handler(404, pagina_no_encontrada)
+    app.run()
 
