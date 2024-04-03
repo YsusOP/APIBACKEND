@@ -478,6 +478,7 @@ def pagina_no_encontrada(error):
 if __name__ == '__main__':
     app.config.from_object(config['production'])
     app.register_error_handler(404, pagina_no_encontrada)
+    uvicorn.run('main:app', host='0.0.0.0', port=8000)
     app.run()
     
 
