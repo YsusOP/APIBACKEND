@@ -17,18 +17,7 @@ app = Flask(__name__)
 
 CORS(app)
 
-class DevelopmentConfig:
-    DEBUG = True
-    MYSQL_HOST = 'basededatos.mysql.database.azure.com'
-    MYSQL_USER = 'exercise'
-    MYSQL_PASSWORD = '57951227Pumba'
-    MYSQL_DB = 'mydb'
-
-# Esta variable 'config' mapea los diferentes entornos a sus respectivas configuraciones
-config = {
-    'development': DevelopmentConfig
-}
-
+from config import config
 conexion=MySQL(app)
 
 #login
