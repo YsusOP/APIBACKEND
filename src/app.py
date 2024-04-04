@@ -17,8 +17,8 @@ app = Flask(__name__)
 
 CORS(app)
 import sys
-sys.path.append('/home/usuario/repos/APIBACKEND/src')
-from config import config
+sys.path.append('/home/site/wwwroot/APIBACKEND/src')
+from myconfig import config
 conexion=MySQL(app)
 
 #login
